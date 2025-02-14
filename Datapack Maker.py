@@ -153,10 +153,6 @@ def create_datapack():
     datapack_name = input("Enter datapack name: ").strip()
     os.makedirs(datapack_name, exist_ok=True)
     
-    if input("Create spyglasssrc.json? (y/n): ").lower().strip() == 'y':
-        with open(os.path.join(datapack_name, 'spyglasssrc.json'), 'w') as f:
-            json.dump({"minecraft_version": version}, f, indent=2)
-    
     print("Enter pack.mcmeta description JSON (press Enter twice to finish):")
     description_lines = []
     while True:
